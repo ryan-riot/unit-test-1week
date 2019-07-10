@@ -111,7 +111,7 @@ public class ChampionTest {
     public void shouldHaveSomeChampName() {
         List<String> champListNames = Arrays.asList("루시안", "애쉬", "렉사이", "갈리오", "모르가느", "블라디미르");
 
-        assertThat(champListNames.get(5), hasToString("블라디미르"));                                    //by LeeDongHun
+        assertThat(champListNames.get(3), hasToString("갈리오"));                                    //by LeeDongHun
     }
 
     //property와 value가 같은지 테스트
