@@ -70,6 +70,7 @@ public class UpperCaseCounterTest {
     //해당 메소드가 제한된 시간내에 실행되는지에 대한 테스트 코드 작성 : timeout 사용
     //두번째로 해당 메소드는 테스트 하지 않도록 어노테이션 추가 적용 해봅니다. Ignore
 
+    @ignore
     @Test(timeout = 5000)
     public void testShouldRunInLimitedTime() throws InterruptedException {
         Thread.sleep(4000);
