@@ -4,6 +4,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.number.OrderingComparison.greaterThanOrEqualTo;
 import static org.junit.Assert.*;
 
 public class UpperCaseCounterTest {
@@ -37,6 +38,16 @@ public class UpperCaseCounterTest {
         int numberOfUpperCaseCharactersInString = upperCaseCounter.getNumberOfUpperCaseCharactersInString(str);
 
         assertThat(numberOfUpperCaseCharactersInString,is(10));         //by LeeDongHun
+    }
+
+    //대문자가 포함된 문자열을 전달했을 때 카운팅된 숫자가 일정 숫자 보다 크거나 같은지 검증하는 테스트 작성
+    @Test
+    public void getNumberOfUpperCaseCharactersInString_return_greaterThan_7_AJOUUNIV(){
+        String str = "AJOUUNIV";
+
+        int numberofUpperCaseCharactersInString = upperCaseCounter.getNumberOfUpperCaseCharactersInString(str);
+
+        assertThat(numberofUpperCaseCharactersInString,greaterThanOrEqualTo(7));
     }
 
     //대소문자가 섞여 있을 때 정확히 카운팅 되는 지에 대한 테스트 코드 작성
