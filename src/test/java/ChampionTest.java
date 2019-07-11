@@ -73,7 +73,7 @@ public class ChampionTest {
     public void testForFloatingPoint() {
 
         assertThat(3.14, closeTo(3.5, 0.4));     //by LeeDongHun
-
+        assertThat(4.256,closeTo(4.260,0.01));   //by JooJaeLin
     }
 
     //anything 테스트
