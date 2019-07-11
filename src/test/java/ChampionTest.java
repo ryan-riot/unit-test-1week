@@ -99,6 +99,15 @@ public class ChampionTest {
         assertThat("타릭",equalTo(supportChamp.getName()));       //by LeeDongHun
     }
 
+    //서폿 챔피언의 포지션이 탑이고 대소문자 상관 없는지 테스트 코드 작성
+    @Test
+    public void shouldSupportChampionPositionIsTop(){
+        Champion supportChamp = new Champion("다리우스","Top");
+
+        assertThat("TOP",equalToIgnoringCase(supportChamp.getPosition()));
+    }   //by JooJaeLin
+
+
     //hasProperty 활용하여 속성이 포함되어 있는지 테스트
     @Test
     public void shouldHasPropertyPosition() {
