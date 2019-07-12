@@ -63,7 +63,7 @@ public class ChampionTest {
         String sampleString2 = "Player point";
         String startString = "Player";
         String endString = "point";
-
+        assertThat(sampleString1, allOf(startsWith(startString), endsWith("Focus")));    // by KimDoHyun
         assertThat(sampleString2,anyOf(startsWith("flayer"),endsWith(endString)));      //by LeeDongHun
 
     }
@@ -112,6 +112,7 @@ public class ChampionTest {
     @Test
     public void shouldHasPropertyPosition() {
 
+        assertThat(championList.get(1), hasProperty("name", equalTo("리신")));    //by KimDoHyun
         assertThat(championList.get(3),hasProperty("position",equalTo("바텀")));                  //by LeeDongHun
     }
 
@@ -120,6 +121,7 @@ public class ChampionTest {
     public void shouldHaveSomeChampName() {
         List<String> champListNames = Arrays.asList("루시안", "애쉬", "렉사이", "갈리오", "모르가느", "블라디미르");
 
+        assertThat(champListNames.get(5), hasToString("블라디미르"));    //by KimDoHyun
         assertThat(champListNames.get(3), hasToString("갈리오"));                                    //by LeeDongHun
     }
 
@@ -128,6 +130,7 @@ public class ChampionTest {
     public void shouldHaveSamePropertyAndValue() {
         List<String> championNames1 = Arrays.asList("루시안", "애쉬", "렉사이", "갈리오", "모르가나", "블라디미르");
         List<String> championNames2 = Arrays.asList("루시안", "애쉬", "렉사이", "갈리오", "모르가나", "블라디미르");
+
 
         assertThat(championNames1, samePropertyValuesAs(championNames2));               //by LeeDongHun
     }
