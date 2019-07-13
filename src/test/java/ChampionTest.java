@@ -135,9 +135,9 @@ public class ChampionTest {
         assertThat(championNames1, samePropertyValuesAs(championNames2));               //by LeeDongHun
     }
 
-    //탑 챔피언은 다리우스여야 한다라는 조건으로 테스트 코드 작성, stream 활용예
+    //바텀 챔피언은 베인여야 한다라는 조건으로 테스트 코드 작성, stream 활용예
     @Test
-    public void shouldTopChampionIsDarius() {
+    public void shouldBottomChampionIsVayne() {
 
         Optional<Champion> filterdChampion = championList.stream()                      //Bring champion in championStream optionally
                 .filter(c -> c.getPosition().equals("바텀"))                            //Filter object whose position is "바텀"
@@ -147,5 +147,4 @@ public class ChampionTest {
         assertThat("베인", is(champName));                                        //by LeeDongHun
 
     }
-
 }

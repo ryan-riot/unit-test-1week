@@ -55,4 +55,21 @@ public class CustomCalculatorTest {
 
         System.out.println("result :: " + result);
     }
+
+    //0으로 나누기를 하였을 때 ArithmeticException 이 발생하는지 테스트 코드 작성
+    @Test(expected = ArithmeticException.class)
+    public void shouldThrowExceptionWhenDivideByZero() {
+        customCalculator = new CustomCalculator();
+        int result = customCalculator.divide(25, 0);
+    }
+
+    //0을 나누었을 때 결과값이 0이 되는지 테스트 코드 작성
+    @Test
+    public void shouldIsZeroWhenDivideIntoZero(){
+        customCalculator = new CustomCalculator();
+        int result = customCalculator.divide(0,5);
+
+        assertThat(result,is(0));
+        System.out.println("result :: " + result);
+    }
 }
