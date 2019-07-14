@@ -73,7 +73,7 @@ public class ChampionTest {
     public void testForFloatingPoint() {
 
         assertThat(3.14, closeTo(3.5, 0.4));     //by LeeDongHun
-        assertThat(4.256,closeTo(4.260,0.01));   //by JooJaeLin
+        assertThat(4.2567,closeTo(4.256,0.001));   //by JooJaeLin
     }
 
     //anything 테스트
@@ -106,6 +106,14 @@ public class ChampionTest {
 
         assertThat("TOP",equalToIgnoringCase(supportChamp.getPosition()));
     }   //by JooJaeLin
+
+    //공백을 무시하고 같은 문자열을 찾을 수 있는지 테스트 코드 작성
+    @Test
+    public void shouldSupportChampionPositionIsDarius(){
+        Champion supportChamp = new Champion("다리우스","Top");
+
+        assertThat("다리우스 ",equalToIgnoringWhiteSpace(supportChamp.getName()));
+    } //by JooJaeLin
 
 
     //hasProperty 활용하여 속성이 포함되어 있는지 테스트
