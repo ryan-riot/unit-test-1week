@@ -12,6 +12,16 @@ public class CustomCalculator {
     }
 
     public int divide(int valueNum1, int valueNum2){
+        if(valueNum2 == 0)
+            logErrorMessage("cannot divide by 0\n");    //Kang chanhyuk
+
         return valueNum1 / valueNum2;
     }
+
+    private void logErrorMessage(String errormessage) {
+        System.out.println(errormessage);
+        throw new RuntimeException();
+    }
+
 }
+
