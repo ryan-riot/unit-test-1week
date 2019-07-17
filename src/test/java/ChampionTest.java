@@ -43,7 +43,7 @@ public class ChampionTest {
     @Test
     public void notNullCheck() {
         String lck = "LCK";
-
+        assertThat(lck, not(nullValue()));          //Kang chanhyuk
         assertThat(lck, notNullValue());            //by LeeDongHun
     }
 
@@ -51,7 +51,7 @@ public class ChampionTest {
     @Test
     public void givenStringWhenNullIsCorrect() {
         String lck = null;
-
+        assertThat(lck, not(notNullValue()));       //Kang chanhyuk
         assertThat(lck, nullValue());               //by LeeDongHun
     }
 
