@@ -65,7 +65,8 @@ public class ChampionTest {
         String endString = "point";
         assertThat(sampleString1, allOf(startsWith(startString), endsWith("Focus")));    // by KimDoHyun
         assertThat(sampleString2,anyOf(startsWith("flayer"),endsWith(endString)));      //by LeeDongHun
-
+        assertThat(sampleString1, containsString("Focus"));                     //Kang chanhyuk
+        assertThat(sampleString2, containsString("point"));                     //Kang chanhyuk
     }
 
     //부동소수점 범위 closeTo 테스트
